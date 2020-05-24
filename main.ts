@@ -1,10 +1,8 @@
 function gelb (aNum: number) {
-    basic.showString("Y")
     pins.analogWritePin(ampelseite[aNum]+1, dioden_helligkeit)
 basic.pause(warte_kurz)
 }
 function gruen (aNum: number) {
-    basic.showString("G")
     pins.analogWritePin(ampelseite[aNum]+0, 0)
 pins.analogWritePin(ampelseite[aNum]+1, 0)
 pins.analogWritePin(ampelseite[aNum]+2, dioden_helligkeit)
@@ -20,7 +18,6 @@ basic.pause(warte_blink)
 }
 function rot (aNum: number) {
     alle_aus(1)
-    basic.showString("R")
     pins.analogWritePin(ampelseite[aNum]+0, dioden_helligkeit)
 basic.pause(warte_lang)
 }
@@ -42,6 +39,7 @@ warte_blink = 500
 basic.forever(function () {
     gruen(0)
     rot(1)
+    gelb(0)
     gelb(1)
     rot(0)
     gruen(1)
