@@ -40,7 +40,9 @@ warte_lang = 5000
 warte_kurz = 2000
 warte_blink = 500
 basic.forever(function () {
+    gruen(0)
     rot(1)
     gelb(1)
-    gruen(0)
+    rot(0)
+    gruen(1)
 })
