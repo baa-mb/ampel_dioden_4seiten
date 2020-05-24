@@ -13,7 +13,7 @@ function gruen (aNum: number) {
         pins.analogWritePin(AnalogPin.P2, 0)
         basic.pause(warte_blink)
         pins.analogWritePin(AnalogPin.P2, dioden_helligkeit)
-        basic.pause(warte_kurz)
+        basic.pause(warte_blink)
     }
     alle_aus(aNum)
     gelb(aNum)
@@ -36,7 +36,7 @@ let dioden_helligkeit = 0
 basic.showIcon(IconNames.Heart)
 dioden_helligkeit = 512
 warte_lang = 5000
-warte_kurz = 1000
+warte_kurz = 2000
 warte_blink = 500
 basic.forever(function () {
     rot(0)
